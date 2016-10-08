@@ -3,6 +3,11 @@
 
 ## Using the sample provided helped immensely.  
 ## The functions created get_matrix, get_matrix_inv,set_matrix,set_matrix_inv
+## Each of these function performed actions on the matrix
+## set_matrix - can be used to provide a matrix like diag(2,8)
+## get_matrix - print the matix
+## get_matrix_inv = will calculate the inverse by calling cachesolve 
+## set_matirx_inv - sets the matirx to be cached
 
 makeCacheMatrix <- function(x=matrix()) {
   m <- NULL
@@ -18,7 +23,9 @@ makeCacheMatrix <- function(x=matrix()) {
        get_matrix_inv = get_matrix_inv)
 }
 
-## Write a short comment describing this function
+## Cachesolve first checks if he matrix is already cached
+## if cached get it, if not perform a solve. Solve is basically
+## inverting a matrix.
 
 cachesolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
